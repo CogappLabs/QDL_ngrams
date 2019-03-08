@@ -5,6 +5,12 @@
     <title>QDL ngrams</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -41,6 +47,7 @@
     window.chartConfig = {
         type: 'line',
         options: {
+            onClick: doQDLSearch,
             responsive: true,
             title: {
                 display: true,
@@ -208,6 +215,12 @@
 
         return data
 
+    }
+
+    function doQDLSearch(event) {
+        // TODO run a search in QDL for the specified term and year
+        // See e.g. https://stackoverflow.com/questions/50515985/get-ylabel-value-onclick-chart-js
+        console.log(event);
     }
 
 </script>
